@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio di funzione</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Studio di funzione</h1>
+  <p class="sub">Scrivi f(x): ottieni dominio, limiti, asintoti, derivate e grafico.</p>
+  <div class="riga">
+    <input id="f" value="(x^2-1)/(x-2)" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Funzione f(x)">
+    <button id="vai" disabled>Studia</button>
+  </div>
+  <div class="es" id="es"></div>
+  <div id="stato" role="status" aria-live="polite">Carico il motore matematico…</div>
+  <div id="out" hidden>
+    <div id="grafico"></div>
+    <div class="riga" style="margin-top:8px"><button class="sec" id="png">Scarica il grafico (PNG)</button></div>
+    <div id="passi"></div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/pyodide@0.26.4/pyodide.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

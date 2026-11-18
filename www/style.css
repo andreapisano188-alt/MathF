@@ -1,0 +1,25 @@
+:root{--carta:#fbfcf8;--griglia:#d3e2ea;--inchiostro:#17314f;--penna:#1f5fbf;--evid:#ffe66b;--rosso:#c8452c;--muto:#5b6f84}
+@media (prefers-color-scheme:dark){:root{--carta:#101a26;--griglia:#1d2d3f;--inchiostro:#e6eef7;--penna:#7fb0ff;--evid:#5a4b00;--rosso:#ff8a73;--muto:#93a6bb}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);color:var(--inchiostro);background:var(--carta);
+ background-image:linear-gradient(var(--griglia) 1px,transparent 1px),linear-gradient(90deg,var(--griglia) 1px,transparent 1px);background-size:24px 24px;
+ font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:20px 16px 48px}
+h1{font:700 clamp(28px,6vw,40px)/1.1 "Iowan Old Style","Palatino Linotype",Georgia,serif;margin:8px 0 4px}
+.sub{color:var(--muto);margin:0 0 18px}
+.riga{display:flex;gap:8px;flex-wrap:wrap}
+#f{flex:1 1 220px;font:600 20px ui-monospace,Menlo,Consolas,monospace;padding:12px 14px;border:2px solid var(--inchiostro);border-radius:6px;background:var(--carta);color:var(--inchiostro)}
+button{font:inherit;font-weight:600;padding:12px 18px;border:2px solid var(--inchiostro);border-radius:6px;background:var(--inchiostro);color:var(--carta);cursor:pointer}
+button.sec{background:transparent;color:var(--inchiostro)}
+:focus-visible{outline:3px solid var(--penna);outline-offset:2px}
+.es{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.es button{padding:4px 10px;font-weight:500;font-size:14px;background:transparent;color:var(--inchiostro);border-width:1px}
+#stato{min-height:1.6em;color:var(--muto)}
+#stato.err{color:var(--rosso);font-weight:600}
+#grafico{width:100%;height:min(70vh,520px);background:var(--carta);border:2px solid var(--inchiostro);border-radius:6px}
+.passo{margin:22px 0;padding-left:14px;border-left:4px solid var(--penna);background:color-mix(in srgb,var(--carta) 88%,transparent)}
+.passo h2{font:700 20px "Iowan Old Style","Palatino Linotype",Georgia,serif;margin:0 0 6px}
+.r{margin:4px 0;overflow-x:auto;padding:2px 0}
+.r .l{display:inline-block;padding:0 4px;background:var(--evid);border-radius:3px}
+[hidden]{display:none!important}
